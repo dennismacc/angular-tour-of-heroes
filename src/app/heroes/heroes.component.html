@@ -16,11 +16,13 @@
   <input id="name" [(ngModel)]="hero.name" placeholder="name" />
 </div> -->
 
+<!-- 👇🏻 This code is no longer needed because it is the "parent" code and we have created a seperate "child" code below that does the same thing and is connected to the hero-detail component 👇🏻
 <div *ngIf="selectedHero">
   <h2>{{ selectedHero.name | uppercase }} Details</h2>
   <div>id: {{ selectedHero.id }}</div>
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
-  </div>
+  </div> -->
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 </div>
