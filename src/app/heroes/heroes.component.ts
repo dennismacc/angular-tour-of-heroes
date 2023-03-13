@@ -22,4 +22,8 @@ export class HeroesComponent {
   onSelect(hero: Hero): void {
     this.selectedHero = hero;  
   }
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
 }
